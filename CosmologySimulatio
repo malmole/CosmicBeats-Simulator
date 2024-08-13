@@ -1,0 +1,19 @@
+CosmologySimulationNumberOfInitialConditions = 1
+CosmologySimulationDensityName             = "density"
+CosmologySimulationVelocityName            = "velocity"
+CosmologySimulationGridRank                = 3
+CosmologySimulationGridDimension           = 64 64 64
+CosmologySimulationMaxRefinementLevel      = 4
+CosmologySimulationInitialRedshift         = 100.0
+CosmologySimulationFinalRedshift           = 0.0
+CosmologySimulationComovingBoxSize         = 1.0
+CosmologySimulationOmegaMatterNow          = 0.3
+CosmologySimulationOmegaLambdaNow          = 0.7
+CosmologySimulationHubbleConstantNow       = 0.7
+CosmologyInitialConditionsSeed             = 12345
+CosmologyInitialConditionsDensityPerturbation = "gaussian"
+CosmologyInitialConditionsDensityPerturbation = "gaussian"
+CosmologyInitialConditionsGaussianCenter = 32.0 32.0 32.0
+CosmologyInitialConditionsGaussianAmplitude = 10.0
+CosmologyInitialConditionsGaussianWidth = 1.0
+mpirun -np 4 ./enzo.exe enzo_cosmology.in
